@@ -5,9 +5,9 @@ main() {
   set -o xtrace
   shopt -s nullglob
 
-  export CHEF_PATH='/opt/chef-workstation/bin:/opt/chef-workstation/embedded/bin:/opt/chef-workstation/bin'
+  export CHEF_PATH='/opt/chef-workstation/bin:/opt/chef-workstation/embedded/bin:/opt/chef/bin'
   if [[ "$(uname -m)" =~ ppc64 ]]; then
-    export CHEF_PATH=$CHEF_PATH:/opt/chef-workstation/embedded/bin
+    export CHEF_PATH=$CHEF_PATH:/opt/chef/embedded/bin
   fi
   export PATH="$CHEF_PATH:$PATH"
   export DEBIAN_FRONTEND='noninteractive'
