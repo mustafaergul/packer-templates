@@ -44,7 +44,7 @@ main() {
 
 __install_serverspec() {
   apt-get install rubygems
-  gem install -v 2.39.1 serverspec
+  gem install -v 2.41.8 serverspec
 }
 
 __install_chef() {
@@ -53,7 +53,6 @@ __install_chef() {
   fi
 
   curl -sSL https://omnitruck.chef.io/install.sh | sudo bash -s -- -P chef-workstation -v 21.10.640
-  gem install -v 2.41.8 serverspec
 }
 
 __run_retry() {
