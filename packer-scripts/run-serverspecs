@@ -48,11 +48,10 @@ __install_serverspec() {
 }
 
 __install_chef() {
-  apt-get install rubygems
-  gem install -v 2.41.8 serverspec
   gem install rspec
   curl -sSL https://omnitruck.chef.io/install.sh | sudo bash -s -- -P chef-workstation -v 21.10.640
-
+  gem install -v 2.41.8 serverspec
+  
   if [[ -f /opt/chef-workstation/embedded/bin/rspec ]]; then
     return
   fi
