@@ -128,7 +128,6 @@ export TERM=xterm
 export PACKER_BUILDER_TYPE=${PACKER_BUILDER_TYPE}
 export RUBYOPT=${RUBYOPT}
 unset GEM_PATH
-rvm use system
 
 cd ${cookbook_dir}
 sudo systemctl start xvfb.service
