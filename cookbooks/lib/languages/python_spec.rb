@@ -23,13 +23,13 @@ describe 'python environment' do
 
   if %w[xenial bionic].include?(Support.distro)
     describe pycommand('py.test --version') do
-      its(:stdout) { should be_empty }
-      its(:stderr) { should match(/pytest (version )?\d+\.\d+\.\d+/) }
+      its(:stderr) { should be_empty }
+      its(:stdout) { should match(/^pytest (version )?\d+\.\d+\.\d+/) }
     end
   elsif 'focal'.include?(Support.distro)
     describe pycommand('py.test --version') do
       its(:stderr) { should be_empty }
-      its(:stdout) { should match(/pytest (version )?\d+\.\d+\.\d+/) }
+      its(:stdout) { should match(/^pytest (version )?\d+\.\d+\.\d+/) }
     end
   end
 
@@ -54,14 +54,15 @@ describe 'python environment' do
   elsif 'bionic'.include?(Support.distro)
     vers = {
       'python2.7' => '2.7.17',
-      'python3.6' => '3.6.10',
-      'python3.7' => '3.7.6',
-      'python3.8' => '3.8.1'
+      'python3.6' => '3.6.9',
+      'python3.7' => '3.7.13',
+      'python3.8' => '3.8.10'
     }
   elsif 'focal'.include?(Support.distro)
     vers = {
-      'python3.7' => '3.7.7',
-      'python3.8' => '3.8.3'
+      'python3.7' => '3.7.13',
+      'python3.8' => '3.8.10',
+      'python3.9' => '3.9.13'
     }
   end
 

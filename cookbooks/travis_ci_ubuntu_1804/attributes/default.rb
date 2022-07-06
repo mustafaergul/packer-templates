@@ -6,11 +6,11 @@ override['travis_system_info']['commands_file'] = \
 override['travis_build_environment']['system_python']['pythons'] = %w[2.7 3.6]
 override['travis_build_environment']['python_aliases'] = {
   '2.7.17' => %w[2.7],
-  '3.6.10' => %w[3.6],
-  '3.7.6' => %w[3.7],
-  '3.8.1' => %w[3.8],
-  'pypy2.7-5.8.0' => %w[pypy],
-  'pypy3.5-5.8.0' => %w[pypy3]
+  '3.6.9' => %w[3.6],
+  '3.7.13' => %w[3.7],
+  '3.8.10' => %w[3.8],
+  'pypy2.7-7.3.9' => %w[pypy],
+  'pypy3.9-7.3.9' => %w[pypy3]
 }
 php_aliases = {
   '7.1' => '7.1.33',
@@ -22,6 +22,8 @@ override['travis_build_environment']['php_versions'] = php_aliases.values
 override['travis_build_environment']['php_default_version'] = php_aliases['7.2']
 override['travis_build_environment']['php_aliases'] = php_aliases
 override['travis_build_environment']['ibm_advanced_tool_chain_version'] = 14.0
+
+#override['travis_build_environment']['virtualenv']['version'] = '20.15.1'
 
 override['travis_build_environment']['elasticsearch']['version'] = '5.5.0'
 if node['kernel']['machine'] == 'ppc64le'
@@ -84,9 +86,9 @@ override['travis_build_environment']['nodejs_default'] = '16.15.1'
 
 pythons = %w[
   2.7.17
-  3.6.10
-  3.7.6
-  3.8.1
+  3.6.9
+  3.7.13
+  3.8.10
 ]
 
 # Reorder pythons so that default python2 and python3 come first
@@ -110,11 +112,10 @@ pythons.each do |full_name|
 end
 
 rubies = %w[
-  2.4.9
-  2.5.3
-  2.5.7
-  2.7.0
-  2.6.5
+  2.5.9
+  2.6.9
+  2.7.6
+  3.1.2
 ]
 
 override['travis_build_environment']['default_ruby'] = rubies.reject { |n| n =~ /jruby/ }.last
