@@ -54,7 +54,7 @@ require 'features/pyenv_spec'
   elsif 'bionic'.include?(Support.distro)
     vers = {
       'python2.7' => '2.7.18',
-      'python3.6' => '3.6.13',
+      'python3.6' => '3.6.15',
       'python3.7' => '3.7.13',
       'python3.8' => '3.8.10'
     }
