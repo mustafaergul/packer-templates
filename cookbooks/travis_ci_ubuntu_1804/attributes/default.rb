@@ -5,8 +5,8 @@ override['travis_system_info']['commands_file'] = \
   '/var/tmp/ubuntu-1804-system-info-commands.yml'
 override['travis_build_environment']['system_python']['pythons'] = %w[2.7 3.6]
 override['travis_build_environment']['python_aliases'] = {
-  '2.7.17' => %w[2.7],
-  '3.6.9' => %w[3.6],
+  '2.7.18' => %w[2.7],
+  '3.6.13' => %w[3.6],
   '3.7.13' => %w[3.7],
   '3.8.10' => %w[3.8],
   'pypy2.7-7.3.9' => %w[pypy],
@@ -23,7 +23,7 @@ override['travis_build_environment']['php_default_version'] = php_aliases['7.2']
 override['travis_build_environment']['php_aliases'] = php_aliases
 override['travis_build_environment']['ibm_advanced_tool_chain_version'] = 14.0
 
-#override['travis_build_environment']['virtualenv']['version'] = '20.15.1'
+override['travis_build_environment']['virtualenv']['version'] = '20.15.1'
 
 override['travis_build_environment']['elasticsearch']['version'] = '5.5.0'
 if node['kernel']['machine'] == 'ppc64le'
@@ -85,8 +85,8 @@ override['travis_build_environment']['nodejs_versions'] = %w[
 override['travis_build_environment']['nodejs_default'] = '16.15.1'
 
 pythons = %w[
-  2.7.17
-  3.6.9
+  2.7.18
+  3.6.13
   3.7.13
   3.8.10
 ]
