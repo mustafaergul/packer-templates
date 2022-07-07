@@ -6,10 +6,10 @@ require 'features/python_interpreter_spec'
 require 'features/pyenv_spec'
 
  describe 'python environment' do
-#   describe pycommand('easy_install --version') do
-#     its(:stderr) { should be_empty }
-#     its(:stdout) { should match(/^setuptools \d+\.\d+\.\d+/) }
-#   end
+  describe pycommand('easy_install --version') do
+    its(:stderr) { should be_empty }
+    its(:stdout) { should match(/^setuptools \d+\.\d+\.\d+/) }
+  end
 
   describe pycommand('pip --version') do
     its(:stderr) { should be_empty }
@@ -21,17 +21,10 @@ require 'features/pyenv_spec'
     its(:stdout) { should match(/^wheel \d+\.\d+\.\d+/) }
   end
 
-  # if %w[xenial bionic].include?(Support.distro)
-  #   describe pycommand('py.test --version') do
-  #     its(:stderr) { should be_empty }
-  #     its(:stdout) { should match(/^pytest (version )?\d+\.\d+\.\d+/) }
-  #   end
-  # elsif 'focal'.include?(Support.distro)
-  #   describe pycommand('py.test --version') do
-  #     its(:stderr) { should be_empty }
-  #     its(:stdout) { should match(/^pytest (version )?\d+\.\d+\.\d+/) }
-  #   end
-  # end
+  describe pycommand('py.test --version') do
+    its(:stderr) { should be_empty }
+    its(:stdout) { should match(/^pytest (version )?\d+\.\d+\.\d+/) }
+  end
 
   describe pycommand('nosetests --version') do
     its(:stderr) { should be_empty }
