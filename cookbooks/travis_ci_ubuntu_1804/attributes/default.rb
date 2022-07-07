@@ -8,7 +8,7 @@ override['travis_build_environment']['python_aliases'] = {
   '2.7.18' => %w[2.7],
   '3.6.15' => %w[3.6],
   '3.7.13' => %w[3.7],
-  '3.8.10' => %w[3.8],
+  '3.8.13' => %w[3.8],
   'pypy2.7-7.3.9' => %w[pypy],
   'pypy3.9-7.3.9' => %w[pypy3]
 }
@@ -88,7 +88,7 @@ pythons = %w[
   2.7.18
   3.6.15
   3.7.13
-  3.8.10
+  3.8.13
 ]
 
 # Reorder pythons so that default python2 and python3 come first

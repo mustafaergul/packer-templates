@@ -6,7 +6,7 @@ override['travis_system_info']['commands_file'] = \
 override['travis_build_environment']['system_python']['pythons'] = %w[3.8] # apt packages
 override['travis_build_environment']['python_aliases'] = {
   '3.7.13' => %w[3.7],
-  '3.8.10' => %w[3.8],
+  '3.8.13' => %w[3.8],
   '3.9.13' => %w[3.9],
   'pypy2.7-7.3.9' => %w[pypy],
   'pypy3.9-7.3.9' => %w[pypy3]
@@ -14,7 +14,7 @@ override['travis_build_environment']['python_aliases'] = {
 # packages build by Cpython + our repo
 pythons = %w[
   3.7.13
-  3.8.10
+  3.8.13
   3.9.13
 ]
 
