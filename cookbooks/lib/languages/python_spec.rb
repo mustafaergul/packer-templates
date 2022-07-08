@@ -28,8 +28,8 @@ describe 'python environment' do
     end
   elsif 'focal'.include?(Support.distro)
     describe pycommand('py.test --version') do
-      its(:stdout) { should be_empty }
-      its(:stderr) { should match(/pytest (version )?\d+\.\d+\.\d+/) }
+      its(:stderr) { should be_empty }
+      its(:stdout) { should match(/pytest (version )?\d+\.\d+\.\d+/) }
     end
   end
 
