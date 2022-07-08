@@ -10,7 +10,7 @@ override['travis_build_environment']['python_aliases'] = {
   '3.7.13' => %w[3.7],
   '3.8.13' => %w[3.8],
   'pypy2.7-7.3.9' => %w[pypy],
-  'pypy3.9-7.3.9' => %w[pypy3]
+  'pypy3.7-7.3.5' => %w[pypy3]
 }
 php_aliases = {
   '7.1' => '7.1.33',
