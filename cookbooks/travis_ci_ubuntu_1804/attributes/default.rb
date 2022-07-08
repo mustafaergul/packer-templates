@@ -5,10 +5,10 @@ override['travis_system_info']['commands_file'] = \
   '/var/tmp/ubuntu-1804-system-info-commands.yml'
 override['travis_build_environment']['system_python']['pythons'] = %w[2.7 3.6]
 override['travis_build_environment']['python_aliases'] = {
-  '2.7.17' => %w[2.7],
-  '3.6.10' => %w[3.6],
-  '3.7.6' => %w[3.7],
-  '3.8.1' => %w[3.8],
+  '2.7.18' => %w[2.7],
+  '3.6.15' => %w[3.6],
+  '3.7.13' => %w[3.7],
+  '3.8.13' => %w[3.8],
   'pypy2.7-5.8.0' => %w[pypy],
   'pypy3.5-5.8.0' => %w[pypy3]
 }
@@ -22,6 +22,8 @@ override['travis_build_environment']['php_versions'] = php_aliases.values
 override['travis_build_environment']['php_default_version'] = php_aliases['7.2']
 override['travis_build_environment']['php_aliases'] = php_aliases
 override['travis_build_environment']['ibm_advanced_tool_chain_version'] = 14.0
+
+override['travis_build_environment']['virtualenv']['version'] = '20.0.20'
 
 override['travis_build_environment']['elasticsearch']['version'] = '5.5.0'
 if node['kernel']['machine'] == 'ppc64le'
@@ -83,10 +85,10 @@ override['travis_build_environment']['nodejs_versions'] = %w[
 override['travis_build_environment']['nodejs_default'] = '16.15.1'
 
 pythons = %w[
-  2.7.17
-  3.6.10
-  3.7.6
-  3.8.1
+  2.7.18
+  3.6.15
+  3.7.13
+  3.8.13
 ]
 
 # Reorder pythons so that default python2 and python3 come first

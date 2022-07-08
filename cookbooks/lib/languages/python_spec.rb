@@ -53,15 +53,15 @@ describe 'python environment' do
     }
   elsif 'bionic'.include?(Support.distro)
     vers = {
-      'python2.7' => '2.7.17',
-      'python3.6' => '3.6.10',
-      'python3.7' => '3.7.6',
-      'python3.8' => '3.8.1'
+      'python2.7' => '2.7.18',
+      'python3.6' => '3.6.15',
+      'python3.7' => '3.7.13',
+      'python3.8' => '3.8.13'
     }
   elsif 'focal'.include?(Support.distro)
     vers = {
-      'python3.7' => '3.7.7',
-      'python3.8' => '3.8.3'
+      'python3.7' => '3.7.13',
+      'python3.8' => '3.8.13'
     }
   end
 
