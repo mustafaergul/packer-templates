@@ -56,8 +56,10 @@ __install_packages() {
     sudo \
     wget \
     python \
+    python-pip \
     rsync \
     ${APT_GET_INSTALL_PRE_CHEF}
+  sudo pip install pip setuptools --upgrade
 }
 
 __setup_sshd() {
