@@ -57,6 +57,7 @@ __install_packages() {
     wget \
     rsync \
     python3 \
+    python3-pip \
     ${APT_GET_INSTALL_PRE_CHEF}
 
   # link python ##TODO move this to chef
