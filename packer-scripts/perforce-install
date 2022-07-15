@@ -16,9 +16,7 @@ main() {
 
   # Install Perforce
   sudo apt-get install helix-p4d
-
-  # Testing upgrade pip
-  sudo pip install pip setuptools --upgrade
+  
 }
 
 main "$@"
