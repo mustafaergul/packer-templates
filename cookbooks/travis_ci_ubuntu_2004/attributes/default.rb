@@ -8,7 +8,7 @@ override['travis_build_environment']['python_aliases'] = {
   '3.8.13' => %w[3.8],
   '3.7.13' => %w[3.7],
   'pypy2.7-7.3.1' => %w[pypy],
-  'pypy3.6-7.3.1' => %w[pypy3]
+  'pypy3.7-7.3.1' => %w[pypy3]
 }
 # packages build by Cpython + our repo
 pythons = %w[
@@ -95,7 +95,7 @@ rubies = %w[
   3.1.2
 ]
 
-override['travis_build_environment']['virtualenv']['version'] = '20.0.20'
+override['travis_build_environment']['virtualenv']['version'] = '20.15.1'
 
 override['travis_build_environment']['default_ruby'] = rubies.reject { |n| n =~ /jruby/ }.max
 override['travis_build_environment']['rubies'] = rubies
